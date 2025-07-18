@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: palevioletred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 0 0 0.5rem;
+    font-weight: 800;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p {
+    font-size: 1.3rem;
+    color: black;
+    margin-bottom: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 12px;
+    margin-bottom: 2rem;
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #8b0000;
+    transition: all 0.2s ease;
+}
+
+.box:hover {
+    background-color: #f8f8f8;
+    transform: scale(1.05);
+}
+
+.reset, .new-btn {
+    background-color: maroon;
+    color: white;
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    box-shadow: black 0 2px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset:hover, .new-btn:hover {
+    background-color: #e64949;
+}
+
+.msg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.msg-box {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#msg {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hide {
+    display: none;
+}
+.msg-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
