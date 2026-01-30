@@ -16,21 +16,40 @@
 
     <main>
         <h1>Tic-Tac-Toe Game</h1>
-        <p>Welcome to the Tic-Tac-Toe game! Click on the boxes to play.</p>
+        <p>Welcome to the Tic-Tac-Toe game! Click on the boxes to play, or use number keys 1-9. Press 'R' to reset game, 'S' to reset scores.</p>
+
+        <div class="score-board" role="region" aria-label="Game Scores">
+            <div class="score">
+                <span class="player">X</span>
+                <span class="score-value" id="score-x" aria-label="X wins">0</span>
+            </div>
+            <div class="score">
+                <span class="player">Draws</span>
+                <span class="score-value" id="score-draw" aria-label="Draw games">0</span>
+            </div>
+            <div class="score">
+                <span class="player">O</span>
+                <span class="score-value" id="score-o" aria-label="O wins">0</span>
+            </div>
+        </div>
+
+        <div id="turn-indicator" class="turn-o" role="status" aria-live="polite">Current Turn: O</div>
+
         <div class="game-container">
-            <div class="game-board">
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>       
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>   
-                <button class="box"></button>
+            <div class="game-board" role="grid" aria-label="Tic Tac Toe Game Board">
+                <button class="box" aria-label="Top left position" data-position="1"></button>
+                <button class="box" aria-label="Top center position" data-position="2"></button>
+                <button class="box" aria-label="Top right position" data-position="3"></button>
+                <button class="box" aria-label="Middle left position" data-position="4"></button>
+                <button class="box" aria-label="Center position" data-position="5"></button>
+                <button class="box" aria-label="Middle right position" data-position="6"></button>
+                <button class="box" aria-label="Bottom left position" data-position="7"></button>
+                <button class="box" aria-label="Bottom center position" data-position="8"></button>
+                <button class="box" aria-label="Bottom right position" data-position="9"></button>
             </div>
             <div class="buttons">
-                <button class="reset">Reset Game</button>
+                <button class="reset" aria-label="Reset current game">Reset Game</button>
+                <button class="reset-scores" aria-label="Reset all scores">Reset Scores</button>
             </div>
         </div>
     </main>
